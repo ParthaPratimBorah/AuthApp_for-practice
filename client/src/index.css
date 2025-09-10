@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom utility for text-wrap */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Light/Dark theme variables using your custom palette */
+@layer base {
+  :root {
+    --background: #FBE4D8;       /* brand-softPink */
+    --foreground: #190019;       /* brand-dark */
+    --card: #DFB6B2;             /* brand-peach */
+    --card-foreground: #2B124C;  /* brand-darkPurple */
+    --primary: #522B5B;          /* brand-purple */
+    --primary-foreground: #FBE4D8; /* brand-softPink */
+    --secondary: #854F6C;        /* brand-mauve */
+    --secondary-foreground: #FBE4D8; /* brand-softPink */
+    --muted: #DFB6B2;            /* brand-peach */
+    --muted-foreground: #2B124C; /* brand-darkPurple */
+    --accent: #522B5B;           /* brand-purple */
+    --accent-foreground: #FBE4D8; /* brand-softPink */
+    --destructive: #FF6B6B;      /* optional custom */
+    --destructive-foreground: #FBE4D8;
+    --border: #2B124C;           /* brand-darkPurple */
+    --input: #DFB6B2;            /* brand-peach */
+    --ring: #522B5B;             /* brand-purple */
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)];
+  }
+}
